@@ -51,14 +51,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                onClick={onDropdown}
-              >
+              <button className="nav-link dropdown-toggle" onClick={onDropdown}>
                 Guías
-              </Link>
+              </button>
               <ul
                 id="guides-dropdown"
                 className="dropdown-menu dropdown-menu-end"

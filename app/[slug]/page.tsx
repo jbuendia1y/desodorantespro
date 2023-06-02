@@ -7,7 +7,12 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 const getPost = async (slug: string) => {
-  const fullPath = path.join("content", "posts", `${slug as string}.md`);
+  const fullPath = path.join(
+    process.cwd(),
+    "content",
+    "posts",
+    `${slug as string}.md`
+  );
   const existPost = fs.existsSync(fullPath);
 
   if (!existPost) return null;
@@ -47,7 +52,12 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const { slug } = params;
-  const fullPath = path.join("content", "posts", `${slug as string}.md`);
+  const fullPath = path.join(
+    process.cwd(),
+    "content",
+    "posts",
+    `${slug as string}.md`
+  );
   const existPost = fs.existsSync(fullPath);
 
   if (!existPost) return {};
