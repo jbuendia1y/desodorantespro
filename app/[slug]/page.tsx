@@ -55,7 +55,7 @@ export async function generateMetadata({
   const result = matter(fs.readFileSync(fullPath, "utf-8"));
 
   return {
-    title: result.data.title + " - " + "DesodorantesPro",
+    title: result.data.title + " | " + "DesodorantesPro",
     description: result.data.description,
   };
 }
