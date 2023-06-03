@@ -1,39 +1,30 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
     "Descubre tu Desodorante Ideal: Frescura y Confianza Duradera | DesodorantesPro",
-  description:
-    "¿Alguna vez te has preguntado cuál es el desodorante ideal para ti? Ese desodorante que te brinde frescura y confianza duradera durante todo el día. Si es así, ¡has llegado al lugar correcto! En este artículo, te ayudaré a encontrar tu desodorante perfecto, tanto si eres hombre como mujer. Los desodorantes juegan un papel crucial en nuestra rutina diaria, manteniéndonos frescos y seguros. ¡Comencemos!",
+  alternates: {
+    canonical: "https://desodorantespro.site/",
+  },
 };
 
 export default function Home() {
   return (
     <>
-      <header className="container mt-4">
-        <div className={styles.headerimage}>
-          <Image
-            src="/images/imagen-principal.jpg"
-            alt="desodorantes"
-            fill
-            priority
-          />
-        </div>
+      <header className="container mt-4 content">
         <h1 className="mt-3">
           Descubre tu Desodorante Ideal: Frescura y Confianza Duradera
         </h1>
         <p>
-          ¿Alguna vez te has preguntado cuál es el desodorante ideal para ti?
+          {/* ¿Alguna vez te has preguntado cuál es el desodorante ideal para ti?
           Ese desodorante que te brinde frescura y confianza duradera durante
-          todo el día. Si es así, ¡has llegado al lugar correcto! En este
-          artículo, te ayudaré a encontrar tu desodorante perfecto, tanto si
-          eres hombre como mujer. Los desodorantes juegan un papel crucial en
-          nuestra rutina diaria, manteniéndonos frescos y seguros. ¡Comencemos!
+          todo el día. Si es así, ¡has llegado al lugar correcto!  */}
+          Aquí, te ayudaré a encontrar tu desodorante perfecto, tanto si eres
+          hombre como mujer. Los desodorantes juegan un papel crucial en nuestra
+          rutina diaria, manteniéndonos frescos y seguros. ¡Comencemos!
         </p>
       </header>
-      <main className="container">
+      <main className="container content">
         <h2>¿Qué es un desodorante y cómo funciona?</h2>
         <p>
           Antes de explorar los diferentes tipos de desodorantes, es importante

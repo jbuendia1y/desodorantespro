@@ -38,10 +38,10 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <>
-      <div
-        className="container mt-4"
+      <main
+        className="container mt-4 content"
         dangerouslySetInnerHTML={{ __html: post.content }}
-      ></div>
+      ></main>
     </>
   );
 }
@@ -67,5 +67,8 @@ export async function generateMetadata({
   return {
     title: result.data.title + " | " + "DesodorantesPro",
     description: result.data.description,
+    alternates: {
+      canonical: `https://desodorantespro.site/${slug}`,
+    },
   };
 }

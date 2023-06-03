@@ -1,9 +1,0 @@
-.headerimage{
-  position: relative;
-  width: 100%;
-  height: 350px;
-}
-
-.headerimage img{
-  object-fit: cover;
-}
